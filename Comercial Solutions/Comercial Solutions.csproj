@@ -58,6 +58,18 @@
     <Compile Include="Forms\Areas\Logistica\beta3.designer.cs">
       <DependentUpon>beta3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Areas\Logistica\frm_ingreso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Areas\Logistica\frm_ingreso.designer.cs">
+      <DependentUpon>frm_ingreso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Areas\Logistica\frm_vehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Areas\Logistica\frm_vehiculo.designer.cs">
+      <DependentUpon>frm_vehiculo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Principal\frm_login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +116,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\Areas\Logistica\beta3.resx">
       <DependentUpon>beta3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Areas\Logistica\frm_ingreso.resx">
+      <DependentUpon>frm_ingreso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Areas\Logistica\frm_vehiculo.resx">
+      <DependentUpon>frm_vehiculo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Principal\frm_login.resx">
       <DependentUpon>frm_login.cs</DependentUpon>
