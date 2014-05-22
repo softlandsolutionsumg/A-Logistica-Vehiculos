@@ -48,11 +48,16 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.cmb_eliminar = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
@@ -61,12 +66,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 34);
+            this.label1.Location = new System.Drawing.Point(15, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 13);
             this.label1.TabIndex = 0;
@@ -76,7 +84,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 61);
+            this.label2.Location = new System.Drawing.Point(15, 58);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 13);
             this.label2.TabIndex = 1;
@@ -85,7 +93,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 90);
+            this.label3.Location = new System.Drawing.Point(15, 87);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 13);
             this.label3.TabIndex = 2;
@@ -94,7 +102,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(28, 122);
+            this.label4.Location = new System.Drawing.Point(15, 119);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 13);
             this.label4.TabIndex = 3;
@@ -104,7 +112,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(342, 38);
+            this.label5.Location = new System.Drawing.Point(235, 27);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(60, 13);
             this.label5.TabIndex = 4;
@@ -113,7 +121,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(341, 65);
+            this.label6.Location = new System.Drawing.Point(234, 54);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(37, 13);
             this.label6.TabIndex = 5;
@@ -122,7 +130,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(341, 90);
+            this.label7.Location = new System.Drawing.Point(234, 79);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(61, 13);
             this.label7.TabIndex = 6;
@@ -131,7 +139,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(342, 122);
+            this.label8.Location = new System.Drawing.Point(235, 111);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(37, 13);
             this.label8.TabIndex = 7;
@@ -139,56 +147,57 @@
             // 
             // txtmodelo
             // 
-            this.txtmodelo.Location = new System.Drawing.Point(157, 27);
+            this.txtmodelo.Location = new System.Drawing.Point(109, 24);
             this.txtmodelo.Name = "txtmodelo";
             this.txtmodelo.Size = new System.Drawing.Size(100, 20);
             this.txtmodelo.TabIndex = 8;
+            this.txtmodelo.TextChanged += new System.EventHandler(this.txtmodelo_TextChanged);
             // 
             // txtcilindros
             // 
-            this.txtcilindros.Location = new System.Drawing.Point(157, 54);
+            this.txtcilindros.Location = new System.Drawing.Point(109, 51);
             this.txtcilindros.Name = "txtcilindros";
             this.txtcilindros.Size = new System.Drawing.Size(100, 20);
             this.txtcilindros.TabIndex = 9;
             // 
             // txtpuertas
             // 
-            this.txtpuertas.Location = new System.Drawing.Point(157, 83);
+            this.txtpuertas.Location = new System.Drawing.Point(109, 80);
             this.txtpuertas.Name = "txtpuertas";
             this.txtpuertas.Size = new System.Drawing.Size(100, 20);
             this.txtpuertas.TabIndex = 10;
             // 
             // txtchasis
             // 
-            this.txtchasis.Location = new System.Drawing.Point(157, 115);
+            this.txtchasis.Location = new System.Drawing.Point(109, 112);
             this.txtchasis.Name = "txtchasis";
             this.txtchasis.Size = new System.Drawing.Size(100, 20);
             this.txtchasis.TabIndex = 11;
             // 
             // txtllantas
             // 
-            this.txtllantas.Location = new System.Drawing.Point(470, 31);
+            this.txtllantas.Location = new System.Drawing.Point(301, 24);
             this.txtllantas.Name = "txtllantas";
             this.txtllantas.Size = new System.Drawing.Size(100, 20);
             this.txtllantas.TabIndex = 12;
             // 
             // txtplaca
             // 
-            this.txtplaca.Location = new System.Drawing.Point(470, 58);
+            this.txtplaca.Location = new System.Drawing.Point(301, 51);
             this.txtplaca.Name = "txtplaca";
             this.txtplaca.Size = new System.Drawing.Size(100, 20);
             this.txtplaca.TabIndex = 13;
             // 
             // txtcapacidad
             // 
-            this.txtcapacidad.Location = new System.Drawing.Point(470, 87);
+            this.txtcapacidad.Location = new System.Drawing.Point(301, 80);
             this.txtcapacidad.Name = "txtcapacidad";
             this.txtcapacidad.Size = new System.Drawing.Size(100, 20);
             this.txtcapacidad.TabIndex = 14;
             // 
             // txtmarca
             // 
-            this.txtmarca.Location = new System.Drawing.Point(470, 119);
+            this.txtmarca.Location = new System.Drawing.Point(301, 112);
             this.txtmarca.Name = "txtmarca";
             this.txtmarca.Size = new System.Drawing.Size(100, 20);
             this.txtmarca.TabIndex = 15;
@@ -196,7 +205,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Comercial_Solutions.Properties.Resources.add;
-            this.pictureBox1.Location = new System.Drawing.Point(358, 189);
+            this.pictureBox1.Location = new System.Drawing.Point(338, 173);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 50);
             this.pictureBox1.TabIndex = 16;
@@ -205,7 +214,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Comercial_Solutions.Properties.Resources.back;
-            this.pictureBox2.Location = new System.Drawing.Point(57, 56);
+            this.pictureBox2.Location = new System.Drawing.Point(37, 40);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(19, 20);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -215,7 +224,7 @@
             // label9
             // 
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(82, 45);
+            this.label9.Location = new System.Drawing.Point(62, 29);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(148, 31);
             this.label9.TabIndex = 18;
@@ -225,6 +234,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.txtpuertas);
             this.panel1.Controls.Add(this.label1);
@@ -242,11 +252,28 @@
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.txtmodelo);
             this.panel1.Controls.Add(this.txtcilindros);
-            this.panel1.Location = new System.Drawing.Point(57, 155);
+            this.panel1.Location = new System.Drawing.Point(37, 139);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(587, 341);
+            this.panel1.Size = new System.Drawing.Size(605, 372);
             this.panel1.TabIndex = 19;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(13, 13);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(107, 13);
+            this.label11.TabIndex = 20;
+            this.label11.Text = "Seleccion de campo:";
+            // 
+            // cmb_eliminar
+            // 
+            this.cmb_eliminar.FormattingEnabled = true;
+            this.cmb_eliminar.Location = new System.Drawing.Point(36, 36);
+            this.cmb_eliminar.Name = "cmb_eliminar";
+            this.cmb_eliminar.Size = new System.Drawing.Size(69, 21);
+            this.cmb_eliminar.TabIndex = 19;
             // 
             // dataGridView1
             // 
@@ -261,7 +288,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(388, 119);
+            this.dataGridView1.Size = new System.Drawing.Size(560, 180);
             this.dataGridView1.TabIndex = 17;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -269,50 +296,83 @@
             // 
             this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox5.Image = global::Comercial_Solutions.Properties.Resources.add;
-            this.pictureBox5.Location = new System.Drawing.Point(57, 82);
+            this.pictureBox5.Location = new System.Drawing.Point(37, 66);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(49, 50);
             this.pictureBox5.TabIndex = 23;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // pictureBox4
             // 
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox4.Enabled = false;
             this.pictureBox4.Image = global::Comercial_Solutions.Properties.Resources.delete;
-            this.pictureBox4.Location = new System.Drawing.Point(225, 82);
+            this.pictureBox4.Location = new System.Drawing.Point(205, 66);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(50, 50);
             this.pictureBox4.TabIndex = 22;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox3
             // 
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Enabled = false;
             this.pictureBox3.Image = global::Comercial_Solutions.Properties.Resources.edit;
-            this.pictureBox3.Location = new System.Drawing.Point(166, 82);
+            this.pictureBox3.Location = new System.Drawing.Point(146, 66);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(53, 50);
             this.pictureBox3.TabIndex = 21;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox6
             // 
             this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox6.Image = global::Comercial_Solutions.Properties.Resources.save;
-            this.pictureBox6.Location = new System.Drawing.Point(112, 82);
+            this.pictureBox6.Location = new System.Drawing.Point(92, 66);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(48, 50);
             this.pictureBox6.TabIndex = 20;
             this.pictureBox6.TabStop = false;
             this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::Comercial_Solutions.Properties.Resources.search;
+            this.pictureBox7.Location = new System.Drawing.Point(319, 67);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(53, 49);
+            this.pictureBox7.TabIndex = 31;
+            this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::Comercial_Solutions.Properties.Resources.refresh;
+            this.pictureBox8.Location = new System.Drawing.Point(259, 66);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(54, 50);
+            this.pictureBox8.TabIndex = 30;
+            this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel2.Controls.Add(this.label11);
+            this.panel2.Controls.Add(this.cmb_eliminar);
+            this.panel2.Location = new System.Drawing.Point(454, 18);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(139, 74);
+            this.panel2.TabIndex = 21;
+            // 
             // frm_vehiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(764, 554);
+            this.ClientSize = new System.Drawing.Size(704, 523);
+            this.Controls.Add(this.pictureBox7);
+            this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
@@ -334,6 +394,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -365,5 +429,10 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox cmb_eliminar;
+        private System.Windows.Forms.Panel panel2;
     }
 }

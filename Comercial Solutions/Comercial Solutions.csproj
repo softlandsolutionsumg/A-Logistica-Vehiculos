@@ -58,11 +58,29 @@
     <Compile Include="Forms\Areas\Logistica\beta3.designer.cs">
       <DependentUpon>beta3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Areas\Logistica\frm_detalle_man.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Areas\Logistica\frm_detalle_man.Designer.cs">
+      <DependentUpon>frm_detalle_man.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Areas\Logistica\frm_ingreso.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Areas\Logistica\frm_ingreso.designer.cs">
       <DependentUpon>frm_ingreso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Areas\Logistica\frm_mantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Areas\Logistica\frm_mantenimiento.Designer.cs">
+      <DependentUpon>frm_mantenimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Areas\Logistica\frm_retiro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Areas\Logistica\frm_retiro.Designer.cs">
+      <DependentUpon>frm_retiro.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Areas\Logistica\frm_vehiculo.cs">
       <SubType>Form</SubType>
@@ -117,8 +135,17 @@
     <EmbeddedResource Include="Forms\Areas\Logistica\beta3.resx">
       <DependentUpon>beta3.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Areas\Logistica\frm_detalle_man.resx">
+      <DependentUpon>frm_detalle_man.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Areas\Logistica\frm_ingreso.resx">
       <DependentUpon>frm_ingreso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Areas\Logistica\frm_mantenimiento.resx">
+      <DependentUpon>frm_mantenimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Areas\Logistica\frm_retiro.resx">
+      <DependentUpon>frm_retiro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Areas\Logistica\frm_vehiculo.resx">
       <DependentUpon>frm_vehiculo.cs</DependentUpon>

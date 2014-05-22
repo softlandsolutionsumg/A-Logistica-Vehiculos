@@ -6,7 +6,7 @@ using System.Windows.Forms;
 using i3nRiqJSON;
 using Comercial_Solutions.Forms.Principal;
 using Comercial_Solutions.Forms.Seguridad;
-
+using Comercial_Solutions.Forms.Seguridad;
 namespace Comercial_Solutions
 {
     static class Program

@@ -64,3 +64,6 @@ C:\Users\Steffany\Documents\GitHub\A-Logistica-Vehiculos\Comercial Solutions\obj
 C:\Users\Steffany\Documents\GitHub\A-Logistica-Vehiculos\Comercial Solutions\obj\Debug\Comercial_Solutions.Forms.Seguridad.frm_Menu_crear_permiso_rol.resources
 C:\Users\Steffany\Documents\GitHub\A-Logistica-Vehiculos\Comercial Solutions\obj\Debug\Comercial_Solutions.Properties.Resources.resources
 C:\Users\Steffany\Documents\GitHub\A-Logistica-Vehiculos\Comercial Solutions\obj\Debug\Comercial Solutions.csproj.GenerateResource.Cache
+C:\Users\Steffany\Documents\GitHub\A-Logistica-Vehiculos\Comercial Solutions\obj\Debug\Comercial_Solutions.Forms.Areas.Logistica.frm_retiro.resources
+C:\Users\Steffany\Documents\GitHub\A-Logistica-Vehiculos\Comercial Solutions\obj\Debug\Comercial_Solutions.Forms.Areas.Logistica.frm_mantenimiento.resources
+C:\Users\Steffany\Documents\GitHub\A-Logistica-Vehiculos\Comercial Solutions\obj\Debug\Comercial_Solutions.Forms.Areas.Logistica.frm_detalle_man.resources
