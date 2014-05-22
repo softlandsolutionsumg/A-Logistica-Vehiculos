@@ -111,6 +111,15 @@ namespace Comercial_Solutions.Forms.Areas.Logistica
 
                 }
                 }
+
+            i3nRiqJson x2 = new i3nRiqJson();
+
+            string query2 = "select cod_vehiculo from tbt_vehiculo";
+
+
+            cmb_eliminar.DataSource = ((x2.consulta_DataGridView(query2)));
+            cmb_eliminar.ValueMember = "cod_vehiculo";
+            cmb_eliminar.DisplayMember = "cod_vehiculo";
         }
 
 

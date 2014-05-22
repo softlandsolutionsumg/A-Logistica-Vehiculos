@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cmb_eliminar = new System.Windows.Forms.ComboBox();
             this.cmb_prov = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txttotal = new System.Windows.Forms.TextBox();
@@ -44,17 +47,18 @@
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cmb_eliminar = new System.Windows.Forms.ComboBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -77,6 +81,33 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(611, 340);
             this.panel1.TabIndex = 29;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.cmb_eliminar);
+            this.panel2.Location = new System.Drawing.Point(457, 11);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(139, 75);
+            this.panel2.TabIndex = 20;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(17, 16);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(107, 13);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "Seleccion de campo:";
+            // 
+            // cmb_eliminar
+            // 
+            this.cmb_eliminar.FormattingEnabled = true;
+            this.cmb_eliminar.Location = new System.Drawing.Point(36, 34);
+            this.cmb_eliminar.Name = "cmb_eliminar";
+            this.cmb_eliminar.Size = new System.Drawing.Size(69, 21);
+            this.cmb_eliminar.TabIndex = 17;
             // 
             // cmb_prov
             // 
@@ -161,6 +192,7 @@
             this.cmb_man.Name = "cmb_man";
             this.cmb_man.Size = new System.Drawing.Size(105, 21);
             this.cmb_man.TabIndex = 1;
+            this.cmb_man.SelectedIndexChanged += new System.EventHandler(this.cmb_man_SelectedIndexChanged);
             // 
             // pictureBox6
             // 
@@ -182,17 +214,18 @@
             this.pictureBox5.Size = new System.Drawing.Size(56, 50);
             this.pictureBox5.TabIndex = 33;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // pictureBox4
             // 
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox4.Enabled = false;
             this.pictureBox4.Image = global::Comercial_Solutions.Properties.Resources.delete;
             this.pictureBox4.Location = new System.Drawing.Point(207, 53);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(57, 50);
             this.pictureBox4.TabIndex = 32;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // label3
             // 
@@ -213,6 +246,7 @@
             this.pictureBox3.Size = new System.Drawing.Size(60, 50);
             this.pictureBox3.TabIndex = 30;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox1
             // 
@@ -225,38 +259,33 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // panel2
+            // pictureBox7
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.cmb_eliminar);
-            this.panel2.Location = new System.Drawing.Point(457, 11);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(139, 75);
-            this.panel2.TabIndex = 20;
+            this.pictureBox7.Image = global::Comercial_Solutions.Properties.Resources.search;
+            this.pictureBox7.Location = new System.Drawing.Point(330, 54);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(53, 49);
+            this.pictureBox7.TabIndex = 36;
+            this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
-            // label4
+            // pictureBox2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 16);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 13);
-            this.label4.TabIndex = 18;
-            this.label4.Text = "Seleccion de campo:";
-            // 
-            // cmb_eliminar
-            // 
-            this.cmb_eliminar.FormattingEnabled = true;
-            this.cmb_eliminar.Location = new System.Drawing.Point(36, 34);
-            this.cmb_eliminar.Name = "cmb_eliminar";
-            this.cmb_eliminar.Size = new System.Drawing.Size(69, 21);
-            this.cmb_eliminar.TabIndex = 17;
+            this.pictureBox2.Image = global::Comercial_Solutions.Properties.Resources.refresh;
+            this.pictureBox2.Location = new System.Drawing.Point(270, 53);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(54, 50);
+            this.pictureBox2.TabIndex = 35;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // frm_detalle_man
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(717, 509);
+            this.Controls.Add(this.pictureBox7);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
@@ -270,14 +299,16 @@
             this.Load += new System.EventHandler(this.frm_detalle_man_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -304,5 +335,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cmb_eliminar;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

@@ -62,7 +62,7 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = global::Comercial_Solutions.Properties.Resources.search;
-            this.pictureBox7.Location = new System.Drawing.Point(317, 60);
+            this.pictureBox7.Location = new System.Drawing.Point(336, 37);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(53, 49);
             this.pictureBox7.TabIndex = 38;
@@ -71,11 +71,12 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Comercial_Solutions.Properties.Resources.refresh;
-            this.pictureBox2.Location = new System.Drawing.Point(257, 59);
+            this.pictureBox2.Location = new System.Drawing.Point(276, 36);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(54, 50);
             this.pictureBox2.TabIndex = 37;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // panel1
             // 
@@ -91,7 +92,7 @@
             this.panel1.Controls.Add(this.txttotal);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.lbl_municipio);
-            this.panel1.Location = new System.Drawing.Point(26, 142);
+            this.panel1.Location = new System.Drawing.Point(45, 119);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(573, 339);
             this.panel1.TabIndex = 31;
@@ -175,9 +176,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(15, 44);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 13);
+            this.label2.Size = new System.Drawing.Size(42, 13);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Total:";
+            this.label2.Text = "Motivo:";
             // 
             // lbl_municipio
             // 
@@ -192,7 +193,7 @@
             // 
             this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox6.Image = global::Comercial_Solutions.Properties.Resources.back;
-            this.pictureBox6.Location = new System.Drawing.Point(26, 26);
+            this.pictureBox6.Location = new System.Drawing.Point(45, 3);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(27, 20);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -203,7 +204,7 @@
             // 
             this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox5.Image = global::Comercial_Solutions.Properties.Resources.add;
-            this.pictureBox5.Location = new System.Drawing.Point(25, 59);
+            this.pictureBox5.Location = new System.Drawing.Point(44, 36);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(56, 50);
             this.pictureBox5.TabIndex = 35;
@@ -213,7 +214,7 @@
             // 
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Image = global::Comercial_Solutions.Properties.Resources.delete;
-            this.pictureBox4.Location = new System.Drawing.Point(194, 59);
+            this.pictureBox4.Location = new System.Drawing.Point(213, 36);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(57, 50);
             this.pictureBox4.TabIndex = 34;
@@ -223,7 +224,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(59, 15);
+            this.label3.Location = new System.Drawing.Point(78, -8);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(302, 31);
             this.label3.TabIndex = 33;
@@ -233,7 +234,7 @@
             // 
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = global::Comercial_Solutions.Properties.Resources.edit;
-            this.pictureBox3.Location = new System.Drawing.Point(134, 59);
+            this.pictureBox3.Location = new System.Drawing.Point(153, 36);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(60, 50);
             this.pictureBox3.TabIndex = 32;
@@ -243,7 +244,7 @@
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::Comercial_Solutions.Properties.Resources.save;
-            this.pictureBox1.Location = new System.Drawing.Point(80, 59);
+            this.pictureBox1.Location = new System.Drawing.Point(99, 36);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(55, 50);
             this.pictureBox1.TabIndex = 30;
@@ -254,7 +255,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(639, 489);
+            this.ClientSize = new System.Drawing.Size(663, 450);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);

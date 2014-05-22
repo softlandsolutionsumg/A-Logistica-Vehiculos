@@ -18,6 +18,7 @@ namespace Comercial_Solutions.Forms.Areas.Logistica
 {
     public partial class frm_mantenimiento : Form
     {
+
         int inteditmode = 0;
         i3nRiqJson db = new i3nRiqJson();
         int X = 0;
@@ -32,7 +33,6 @@ namespace Comercial_Solutions.Forms.Areas.Logistica
             Y = Propp.Y;
             InitializeComponent();
         }
-
 
         public void actualizar()
         {
@@ -56,6 +56,7 @@ namespace Comercial_Solutions.Forms.Areas.Logistica
 
 
         }
+
 
         public void ingresovehiculo()
         {
@@ -94,6 +95,7 @@ namespace Comercial_Solutions.Forms.Areas.Logistica
         }
 
  
+
         private void frm_mantenimiento_Load(object sender, EventArgs e)
         {
             this.Size = new Size(X, Y);
@@ -104,6 +106,15 @@ namespace Comercial_Solutions.Forms.Areas.Logistica
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             ingresovehiculo();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = db.consulta_DataGridView("SELECT * FROM tbt_mantenimiento_vehiculo ;");
+            // cmb_vehiculo.DataSource = db.consulta_ComboBox("select cod_vehiculo, modelo_vehiculo from tbt_vehiculo;");
+            // cmb_vehiculo.DisplayMember = "modelo_vehiculo";
+            // cmb_vehiculo.ValueMember = "cod_vehiculo";
+            this.dataGridView1.Columns[0].Visible = false;
         }
     }
 }

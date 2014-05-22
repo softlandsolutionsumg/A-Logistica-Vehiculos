@@ -88,6 +88,16 @@ namespace Comercial_Solutions.Forms.Areas.Logistica
                 i3nRiqJson x = new i3nRiqJson();
                 x.insertar("1", tabla, dict);
                 MessageBox.Show("Datos ingresados de vehiculo " + i3nRiqJson.RespuestaConexion.ToString());
+
+
+                i3nRiqJson x2 = new i3nRiqJson();
+
+                string query2 = "select idretiro_vehiculo from retiro_vehiculo";
+
+
+                cmb_eliminar.DataSource = ((x2.consulta_DataGridView(query2)));
+                cmb_eliminar.ValueMember = "idretiro_vehiculo";
+                cmb_eliminar.DisplayMember = "idretiro_vehiculo";
             }
         }
 
