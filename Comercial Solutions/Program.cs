@@ -7,6 +7,8 @@ using i3nRiqJSON;
 using Comercial_Solutions.Forms.Principal;
 using Comercial_Solutions.Forms.Seguridad;
 using Comercial_Solutions.Forms.Seguridad;
+//using Comercial_Solutions.Forms.Areas.Logistica;
+
 namespace Comercial_Solutions
 {
     static class Program
@@ -20,7 +22,9 @@ namespace Comercial_Solutions
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new frm_login());
-            Application.Run(new frm_login());
+           Application.Run(new frm_login());
+            //Application.Run(new frm_ingreso());
+
         }
     }
 }

@@ -31,6 +31,7 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.cmb_eliminar = new System.Windows.Forms.ComboBox();
             this.cmb_vehiculo = new System.Windows.Forms.ComboBox();
             this.dtpfecha = new System.Windows.Forms.DateTimePicker();
@@ -45,24 +46,25 @@
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox7
             // 
             this.pictureBox7.Image = global::Comercial_Solutions.Properties.Resources.search;
-            this.pictureBox7.Location = new System.Drawing.Point(325, 44);
+            this.pictureBox7.Location = new System.Drawing.Point(335, 43);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(53, 49);
             this.pictureBox7.TabIndex = 38;
@@ -72,7 +74,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Comercial_Solutions.Properties.Resources.refresh;
-            this.pictureBox2.Location = new System.Drawing.Point(265, 43);
+            this.pictureBox2.Location = new System.Drawing.Point(275, 43);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(54, 50);
             this.pictureBox2.TabIndex = 37;
@@ -98,12 +100,22 @@
             this.panel1.Size = new System.Drawing.Size(573, 339);
             this.panel1.TabIndex = 31;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.cmb_eliminar);
+            this.panel2.Location = new System.Drawing.Point(378, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(192, 92);
+            this.panel2.TabIndex = 20;
+            // 
             // cmb_eliminar
             // 
             this.cmb_eliminar.FormattingEnabled = true;
             this.cmb_eliminar.Location = new System.Drawing.Point(36, 41);
             this.cmb_eliminar.Name = "cmb_eliminar";
-            this.cmb_eliminar.Size = new System.Drawing.Size(69, 21);
+            this.cmb_eliminar.Size = new System.Drawing.Size(119, 21);
             this.cmb_eliminar.TabIndex = 17;
             // 
             // cmb_vehiculo
@@ -116,7 +128,7 @@
             // 
             // dtpfecha
             // 
-            this.dtpfecha.Location = new System.Drawing.Point(92, 5);
+            this.dtpfecha.Location = new System.Drawing.Point(92, 42);
             this.dtpfecha.Name = "dtpfecha";
             this.dtpfecha.Size = new System.Drawing.Size(200, 20);
             this.dtpfecha.TabIndex = 15;
@@ -148,15 +160,16 @@
             // 
             // txttotal
             // 
-            this.txttotal.Location = new System.Drawing.Point(92, 37);
+            this.txttotal.Location = new System.Drawing.Point(92, 9);
             this.txttotal.Name = "txttotal";
+            this.txttotal.ReadOnly = true;
             this.txttotal.Size = new System.Drawing.Size(121, 20);
             this.txttotal.TabIndex = 7;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 44);
+            this.label2.Location = new System.Drawing.Point(15, 19);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 13);
             this.label2.TabIndex = 6;
@@ -165,7 +178,7 @@
             // lbl_municipio
             // 
             this.lbl_municipio.AutoSize = true;
-            this.lbl_municipio.Location = new System.Drawing.Point(15, 11);
+            this.lbl_municipio.Location = new System.Drawing.Point(15, 49);
             this.lbl_municipio.Name = "lbl_municipio";
             this.lbl_municipio.Size = new System.Drawing.Size(40, 13);
             this.lbl_municipio.TabIndex = 3;
@@ -197,7 +210,7 @@
             // 
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Image = global::Comercial_Solutions.Properties.Resources.delete;
-            this.pictureBox4.Location = new System.Drawing.Point(202, 43);
+            this.pictureBox4.Location = new System.Drawing.Point(212, 42);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(57, 50);
             this.pictureBox4.TabIndex = 34;
@@ -218,7 +231,7 @@
             // 
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = global::Comercial_Solutions.Properties.Resources.edit;
-            this.pictureBox3.Location = new System.Drawing.Point(142, 43);
+            this.pictureBox3.Location = new System.Drawing.Point(149, 43);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(60, 50);
             this.pictureBox3.TabIndex = 32;
@@ -229,37 +242,45 @@
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::Comercial_Solutions.Properties.Resources.save;
-            this.pictureBox1.Location = new System.Drawing.Point(88, 43);
+            this.pictureBox1.Location = new System.Drawing.Point(95, 42);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(55, 50);
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // panel2
+            // textBox2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.cmb_eliminar);
-            this.panel2.Location = new System.Drawing.Point(402, 19);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(139, 75);
-            this.panel2.TabIndex = 20;
+            this.textBox2.Location = new System.Drawing.Point(529, 55);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 40;
+            this.textBox2.Visible = false;
             // 
-            // label4
+            // textBox1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 16);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 13);
-            this.label4.TabIndex = 18;
-            this.label4.Text = "Seleccion de campo:";
+            this.textBox1.Location = new System.Drawing.Point(529, 23);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 39;
+            this.textBox1.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(-3, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(200, 13);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "Seleccione para eliminar, buscar y editar:";
             // 
             // frm_retiro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(641, 465);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
@@ -277,14 +298,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -310,6 +331,8 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

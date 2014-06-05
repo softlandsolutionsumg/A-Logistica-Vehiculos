@@ -218,10 +218,10 @@
             // toolStripContainer3.ContentPanel
             // 
             this.toolStripContainer3.ContentPanel.BackgroundImage = global::Comercial_Solutions.Properties.Resources.fondo_h;
-            this.toolStripContainer3.ContentPanel.Size = new System.Drawing.Size(75, 658);
+            this.toolStripContainer3.ContentPanel.Size = new System.Drawing.Size(75, 650);
             this.toolStripContainer3.Location = new System.Drawing.Point(645, 55);
             this.toolStripContainer3.Name = "toolStripContainer3";
-            this.toolStripContainer3.Size = new System.Drawing.Size(75, 683);
+            this.toolStripContainer3.Size = new System.Drawing.Size(75, 675);
             this.toolStripContainer3.TabIndex = 4;
             this.toolStripContainer3.Text = "toolStripContainer3";
             // 
@@ -234,7 +234,7 @@
             // 
             this.toolStripContainer4.ContentPanel.BackgroundImage = global::Comercial_Solutions.Properties.Resources.submenugris2;
             this.toolStripContainer4.ContentPanel.Size = new System.Drawing.Size(412, 105);
-            this.toolStripContainer4.Location = new System.Drawing.Point(240, 608);
+            this.toolStripContainer4.Location = new System.Drawing.Point(240, 600);
             this.toolStripContainer4.Name = "toolStripContainer4";
             this.toolStripContainer4.Size = new System.Drawing.Size(412, 130);
             this.toolStripContainer4.TabIndex = 5;
@@ -250,11 +250,11 @@
             this.toolStripContainer5.ContentPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.toolStripContainer5.ContentPanel.Controls.Add(this.lstMODULOS);
             this.toolStripContainer5.ContentPanel.Controls.Add(this.lblAREA);
-            this.toolStripContainer5.ContentPanel.Size = new System.Drawing.Size(250, 658);
+            this.toolStripContainer5.ContentPanel.Size = new System.Drawing.Size(250, 650);
             this.toolStripContainer5.ContentPanel.Load += new System.EventHandler(this.toolStripContainer5_ContentPanel_Load);
             this.toolStripContainer5.Location = new System.Drawing.Point(0, 55);
             this.toolStripContainer5.Name = "toolStripContainer5";
-            this.toolStripContainer5.Size = new System.Drawing.Size(250, 683);
+            this.toolStripContainer5.Size = new System.Drawing.Size(250, 675);
             this.toolStripContainer5.TabIndex = 6;
             this.toolStripContainer5.Text = "toolStripContainer5";
             // 
@@ -278,7 +278,7 @@
             // lblAREA
             // 
             this.lblAREA.BackColor = System.Drawing.Color.Transparent;
-            this.lblAREA.Font = new System.Drawing.Font("Adobe Ming Std L", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAREA.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAREA.ForeColor = System.Drawing.Color.White;
             this.lblAREA.Location = new System.Drawing.Point(9, 15);
             this.lblAREA.Name = "lblAREA";
@@ -296,7 +296,7 @@
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
             this.webBrowser1.ScrollBarsEnabled = false;
-            this.webBrowser1.Size = new System.Drawing.Size(27, 23);
+            this.webBrowser1.Size = new System.Drawing.Size(27, 20);
             this.webBrowser1.TabIndex = 8;
             this.webBrowser1.Visible = false;
             // 
@@ -313,7 +313,7 @@
             this.webload.Location = new System.Drawing.Point(286, 61);
             this.webload.MinimumSize = new System.Drawing.Size(20, 20);
             this.webload.Name = "webload";
-            this.webload.Size = new System.Drawing.Size(24, 23);
+            this.webload.Size = new System.Drawing.Size(24, 20);
             this.webload.TabIndex = 9;
             this.webload.Visible = false;
             // 
@@ -328,7 +328,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::Comercial_Solutions.Properties.Resources.fondo;
-            this.ClientSize = new System.Drawing.Size(720, 741);
+            this.ClientSize = new System.Drawing.Size(720, 733);
             this.Controls.Add(this.webload);
             this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.toolStripContainer5);

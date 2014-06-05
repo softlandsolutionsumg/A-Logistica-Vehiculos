@@ -28,6 +28,8 @@ namespace Comercial_Solutions.Forms.Areas.Logistica
       
         bool editar = false;
         string id;
+        string stef3;
+        string stef4;
         public frm_detalle_man()
         {
             X = Propp.X;
@@ -42,19 +44,34 @@ namespace Comercial_Solutions.Forms.Areas.Logistica
 
 
             i3nRiqJson x = new i3nRiqJson();
-            string query = "select gastos, total from tbt_detalle_mantenimiento";
-            dataGridView1.DataSource = ((x.consulta_DataGridView(query)));
+            //string query = "select gastos, total from tbt_detalle_mantenimiento";
+            //dataGridView1.DataSource = ((x.consulta_DataGridView(query)));
 
 
+            dataGridView1.DataSource = db.consulta_DataGridView("SELECT * FROM tbt_detalle_mantenimiento");
+            dataGridView1.Columns[1].HeaderText = "Gastos";
+            dataGridView1.Columns[2].HeaderText = "Total";
+            dataGridView1.Columns[3].HeaderText = "Codigo mantenimiento";
+            dataGridView1.Columns[4].HeaderText = "Proveedor";
+            this.dataGridView1.Columns[0].Visible = false;
 
             i3nRiqJson x2 = new i3nRiqJson();
+
+            string query2 = "select cod_vehiculo, placa_vehiculo from tbt_vehiculo";
+
+
+            cmb_man.DataSource = ((x2.consulta_DataGridView(query2)));
+            cmb_man.ValueMember = "cod_vehiculo";
+            cmb_man.DisplayMember = "placa_vehiculo";
+
+           /* i3nRiqJson x2 = new i3nRiqJson();
 
             string query2 = "select idtbt_mantenimiento_vehiculo from tbt_mantenimiento_vehiculo";
 
 
             cmb_man.DataSource = ((x2.consulta_DataGridView(query2)));
             cmb_man.ValueMember = "idtbt_mantenimiento_vehiculo";
-            cmb_man.DisplayMember = "idtbt_mantenimiento_vehiculo";
+            cmb_man.DisplayMember = "idtbt_mantenimiento_vehiculo";*/
 
 
             i3nRiqJson x3 = new i3nRiqJson();
@@ -87,6 +104,12 @@ namespace Comercial_Solutions.Forms.Areas.Logistica
                 dict.Add("gastos", txtgastos.Text);
                 dict.Add("total", txttotal.Text);
 
+
+
+
+
+
+
                 i3nRiqJson x4 = new i3nRiqJson();
                 string query4 = "select idtbt_mantenimiento_vehiculo from tbt_mantenimiento_vehiculo where idtbt_mantenimiento_vehiculo='" + cmb_man.Text + "'";
                 System.Collections.ArrayList array = x4.consultar(query4);
@@ -118,14 +141,25 @@ namespace Comercial_Solutions.Forms.Areas.Logistica
                 x.insertar("1", tabla, dict);
                 MessageBox.Show("Datos ingresados en detalle mantenimiento  " + i3nRiqJson.RespuestaConexion.ToString());
 
+             
                 i3nRiqJson x2 = new i3nRiqJson();
 
-                string query2 = "select idtbt_detalle_mantenimiento from tbt_detalle_mantenimiento";
+                string query2 = "select cod_vehiculo, placa_vehiculo from tbt_vehiculo";
 
 
                 cmb_eliminar.DataSource = ((x2.consulta_DataGridView(query2)));
+                cmb_eliminar.ValueMember = "cod_vehiculo";
+                cmb_eliminar.DisplayMember = "placa_vehiculo";
+
+                actualizar();
+              /*  i3nRiqJson x2 = new i3nRiqJson();
+
+                string query2 = "select idtbt_detalle_mantenimiento from tbt_detalle_mantenimiento";
+
+                
+                cmb_eliminar.DataSource = ((x2.consulta_DataGridView(query2)));
                 cmb_eliminar.ValueMember = "idtbt_detalle_mantenimiento";
-                cmb_eliminar.DisplayMember = "idtbt_detalle_mantenimiento";
+                cmb_eliminar.DisplayMember = "idtbt_detalle_mantenimiento";*/
             }
         }
 
@@ -139,19 +173,23 @@ namespace Comercial_Solutions.Forms.Areas.Logistica
             this.Location = new Point(250, 56);
             actualizar();
 
-            i3nRiqJson x2 = new i3nRiqJson();
 
-            string query2 = "select idtbt_detalle_mantenimiento from tbt_detalle_mantenimiento";
+
+            i3nRiqJson x2 = new i3nRiqJson();
+            string query2 = "select cod_vehiculo, placa_vehiculo from tbt_vehiculo";
 
 
             cmb_eliminar.DataSource = ((x2.consulta_DataGridView(query2)));
-            cmb_eliminar.ValueMember = "idtbt_detalle_mantenimiento";
-            cmb_eliminar.DisplayMember = "idtbt_detalle_mantenimiento";
+            cmb_eliminar.ValueMember = "cod_vehiculo";
+            cmb_eliminar.DisplayMember = "placa_vehiculo";
+
         }
         
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             ingresovehiculo();
+            txtgastos.Text = "";
+            txttotal.Text = "";
         }
 
         private void cmb_man_SelectedIndexChanged(object sender, EventArgs e)
@@ -161,11 +199,16 @@ namespace Comercial_Solutions.Forms.Areas.Logistica
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = db.consulta_DataGridView("SELECT * FROM tbt_detalle_mantenimiento ;");
-            // cmb_vehiculo.DataSource = db.consulta_ComboBox("select cod_vehiculo, modelo_vehiculo from tbt_vehiculo;");
-            // cmb_vehiculo.DisplayMember = "modelo_vehiculo";
-            // cmb_vehiculo.ValueMember = "cod_vehiculo";
-            this.dataGridView1.Columns[0].Visible = false;
+            i3nRiqJson x = new i3nRiqJson();
+            string tabla = "tbt_detalle_mantenimiento";
+            Dictionary<string, string> dict = new Dictionary<string, string>();
+            dict.Add("gastos", txtgastos.Text);
+            dict.Add("total", txttotal.Text);
+            
+           
+          string condicion = "idtbt_detalle_mantenimiento= " + cmb_eliminar.SelectedValue.ToString();
+            //  Console.WriteLine("INICIA");
+            x.actualizar("3", tabla, dict, condicion);
 
         }
 
@@ -179,6 +222,14 @@ namespace Comercial_Solutions.Forms.Areas.Logistica
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
+
+            
+       
+        
+
+
+
+
             i3nRiqJson x = new i3nRiqJson();
             string tabla = "tbt_detalle_mantenimiento";
             string condicion = "idtbt_detalle_mantenimiento=" + cmb_eliminar.SelectedValue;
@@ -186,6 +237,7 @@ namespace Comercial_Solutions.Forms.Areas.Logistica
 
             //string condicion = "idtbt_ingreso_vehiculo=" + id;
             x.eliminar("4", tabla, condicion);
+            MessageBox.Show("Dato eliminado en detalle mantenimiento " + i3nRiqJson.RespuestaConexion.ToString());
             //ºº  x.eliminar("4", "tbt_bancos", condicion);
 
             i3nRiqJson x2 = new i3nRiqJson();
@@ -196,6 +248,8 @@ namespace Comercial_Solutions.Forms.Areas.Logistica
             cmb_eliminar.DataSource = ((x2.consulta_DataGridView(query2)));
             cmb_eliminar.ValueMember = "idtbt_detalle_mantenimiento";
             cmb_eliminar.DisplayMember = "idtbt_detalle_mantenimiento";
+
+            actualizar();
                 
         }
 
@@ -212,8 +266,8 @@ namespace Comercial_Solutions.Forms.Areas.Logistica
             txttotal.ReadOnly = false;
             int i = dataGridView1.CurrentRow.Index;
             id = dataGridView1.Rows[i].Cells[0].Value.ToString();
-            txtgastos.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
-            txttotal.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
+            txtgastos.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
+            txttotal.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
         }
     }
 }

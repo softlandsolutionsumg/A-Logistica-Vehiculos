@@ -26,6 +26,9 @@ namespace Comercial_Solutions.Forms.Areas.Logistica
         string EditCod = "";
         bool editar = false;
         string id;
+
+        string stef2;
+        string stef3;
         public frm_retiro()
         {
             X = Propp.X;
@@ -35,22 +38,22 @@ namespace Comercial_Solutions.Forms.Areas.Logistica
         public void actualizar()
         {
 
+           i3nRiqJson x = new i3nRiqJson();
 
+           string query = "SELECT  retiro_vehiculo.causa as Causa, retiro_vehiculo.fecha as Fecha, tbt_vehiculo. placa_vehiculo as Vehiculo from  retiro_vehiculo,tbt_vehiculo where  retiro_vehiculo.tbt_vehiculo_cod_vehiculo = tbt_vehiculo.cod_vehiculo";
+           dataGridView1.DataSource = ((x.consulta_DataGridView(query)));
 
-            i3nRiqJson x = new i3nRiqJson();
-            string query = "select causa, fecha from retiro_vehiculo";
-            dataGridView1.DataSource = ((x.consulta_DataGridView(query)));
-
-
-
+       
             i3nRiqJson x2 = new i3nRiqJson();
 
-            string query2 = "select cod_vehiculo,modelo_vehiculo from tbt_vehiculo";
+            string query2 = "select cod_vehiculo, placa_vehiculo from tbt_vehiculo";
 
 
             cmb_vehiculo.DataSource = ((x2.consulta_DataGridView(query2)));
             cmb_vehiculo.ValueMember = "cod_vehiculo";
-            cmb_vehiculo.DisplayMember = "modelo_vehiculo";
+            cmb_vehiculo.DisplayMember = "placa_vehiculo";
+
+
 
 
         }
@@ -68,11 +71,12 @@ namespace Comercial_Solutions.Forms.Areas.Logistica
 
                 string tabla = "retiro_vehiculo";
                 Dictionary<string, string> dict = new Dictionary<string, string>();
-                dict.Add("fecha", dtpfecha.Value.Date.ToString("yyyy-MM-dd HH:mm"));
                 dict.Add("causa", txttotal.Text);
+                dict.Add("fecha", dtpfecha.Value.Date.ToString("yyyy-MM-dd HH:mm"));
+              
 
                 i3nRiqJson x4 = new i3nRiqJson();
-                string query4 = "select cod_vehiculo from tbt_vehiculo where modelo_vehiculo='" + cmb_vehiculo.Text + "'";
+                string query4 = "select cod_vehiculo from tbt_vehiculo where placa_vehiculo='" + cmb_vehiculo.Text + "'";
                 System.Collections.ArrayList array = x4.consultar(query4);
 
 
@@ -89,15 +93,16 @@ namespace Comercial_Solutions.Forms.Areas.Logistica
                 x.insertar("1", tabla, dict);
                 MessageBox.Show("Datos ingresados de vehiculo " + i3nRiqJson.RespuestaConexion.ToString());
 
-
+               
                 i3nRiqJson x2 = new i3nRiqJson();
 
-                string query2 = "select idretiro_vehiculo from retiro_vehiculo";
+                string query2 = "select cod_vehiculo, placa_vehiculo from tbt_vehiculo";
 
 
                 cmb_eliminar.DataSource = ((x2.consulta_DataGridView(query2)));
-                cmb_eliminar.ValueMember = "idretiro_vehiculo";
-                cmb_eliminar.DisplayMember = "idretiro_vehiculo";
+                cmb_eliminar.ValueMember = "cod_vehiculo";
+                cmb_eliminar.DisplayMember = "placa_vehiculo";
+                actualizar();
             }
         }
 
@@ -112,13 +117,12 @@ namespace Comercial_Solutions.Forms.Areas.Logistica
             actualizar();
 
             i3nRiqJson x2 = new i3nRiqJson();
-
-            string query2 = "select idretiro_vehiculo from retiro_vehiculo";
+            string query2 = "select cod_vehiculo, placa_vehiculo from tbt_vehiculo";
 
 
             cmb_eliminar.DataSource = ((x2.consulta_DataGridView(query2)));
-            cmb_eliminar.ValueMember = "idretiro_vehiculo";
-            cmb_eliminar.DisplayMember = "idretiro_vehiculo";
+            cmb_eliminar.ValueMember = "cod_vehiculo";
+            cmb_eliminar.DisplayMember = "placa_vehiculo";
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -131,40 +135,70 @@ namespace Comercial_Solutions.Forms.Areas.Logistica
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            editar = true;
+         /* editar = true;
             txttotal.ReadOnly = false;
 
             dataGridView1.DataSource = db.consulta_DataGridView("SELECT * FROM retiro_vehiculo ;");
-            // cmb_vehiculo.DataSource = db.consulta_ComboBox("select cod_vehiculo, modelo_vehiculo from tbt_vehiculo;");
-            // cmb_vehiculo.DisplayMember = "modelo_vehiculo";
-            // cmb_vehiculo.ValueMember = "cod_vehiculo";
+            
             this.dataGridView1.Columns[0].Visible = false;
+            */
+            actualizar();
 
-
-            // int i = dataGridView1.CurrentRow.Index;
-            // id = dataGridView1.Rows[i].Cells[0].Value.ToString();
-            //txttotal.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
+           
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
+            i3nRiqJson x3 = new i3nRiqJson();
+            string query = "select cod_vehiculo from tbt_vehiculo where placa_vehiculo='" + cmb_eliminar.Text + "'";
+            System.Collections.ArrayList array = x3.consultar(query);
+
+            foreach (Dictionary<string, string> dic in array)
+            {
+                stef2 = (dic["cod_vehiculo"] + "\n");
+                // txtR.AppendText(dic["employee_name"] + "\n");
+                // Console.WriteLine("VIENEN: "+dic["employee_name"]);
+
+            }
+
+
+
+            textBox1.Text = stef2;
+
+            i3nRiqJson x4 = new i3nRiqJson();
+            string query2 = "select idretiro_vehiculo from retiro_vehiculo where tbt_vehiculo_cod_vehiculo='" + textBox1.Text + "'";
+            System.Collections.ArrayList array2 = x4.consultar(query2);
+
+            foreach (Dictionary<string, string> dic in array2)
+            {
+                stef3 = (dic["idretiro_vehiculo"] + "\n");
+
+                // txtR.AppendText(dic["employee_name"] + "\n");
+                // Console.WriteLine("VIENEN: "+dic["employee_name"]);
+
+            }
+
+
+            textBox2.Text = stef3;
+
+
+
             i3nRiqJson x = new i3nRiqJson();
             string tabla = "retiro_vehiculo";
-            string condicion = "idretiro_vehiculo=" + cmb_eliminar.SelectedValue;
-
+            string condicion = "idretiro_vehiculo=" + stef3;
 
             //string condicion = "idtbt_ingreso_vehiculo=" + id;
             x.eliminar("4", tabla, condicion);
+            MessageBox.Show("Dato eliminado en ingreso vehiculo " + i3nRiqJson.RespuestaConexion.ToString());
+
             //ºº  x.eliminar("4", "tbt_bancos", condicion);
 
-            i3nRiqJson x2 = new i3nRiqJson();
 
-            string query2 = "select idretiro_vehiculo from retiro_vehiculo";
+            actualizar();
 
-
-            cmb_eliminar.DataSource = ((x2.consulta_DataGridView(query2)));
-            cmb_eliminar.ValueMember = "idretiro_vehiculo";
-            cmb_eliminar.DisplayMember = "idretiro_vehiculo";
+            
+                
+           
                 
         }
 
@@ -176,18 +210,120 @@ namespace Comercial_Solutions.Forms.Areas.Logistica
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            editar = true;
-            txttotal.ReadOnly = false;
-            int i = dataGridView1.CurrentRow.Index;
-            id = dataGridView1.Rows[i].Cells[0].Value.ToString();
-            txttotal.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
+            i3nRiqJson x3 = new i3nRiqJson();
+            string query = "select cod_vehiculo from tbt_vehiculo where placa_vehiculo='" + cmb_eliminar.Text + "'";
+            System.Collections.ArrayList array = x3.consultar(query);
+
+            foreach (Dictionary<string, string> dic in array)
+            {
+                stef2 = (dic["cod_vehiculo"] + "\n");
+                // txtR.AppendText(dic["employee_name"] + "\n");
+                // Console.WriteLine("VIENEN: "+dic["employee_name"]);
+
+            }
+
+
+
+            textBox1.Text = stef2;
+
+            i3nRiqJson x4 = new i3nRiqJson();
+            string query2 = "select idretiro_vehiculo from retiro_vehiculo where tbt_vehiculo_cod_vehiculo='" + textBox1.Text + "'";
+            System.Collections.ArrayList array2 = x4.consultar(query2);
+
+            foreach (Dictionary<string, string> dic in array2)
+            {
+                stef3 = (dic["idretiro_vehiculo"] + "\n");
+
+                // txtR.AppendText(dic["employee_name"] + "\n");
+                // Console.WriteLine("VIENEN: "+dic["employee_name"]);
+
+            }
+
+
+            textBox2.Text = stef3;   
+
+
+
+
+            i3nRiqJson x = new i3nRiqJson();
+            string tabla = "retiro_vehiculo";
+            Dictionary<string, string> dict = new Dictionary<string, string>();
+
+
+            dict.Add("causa", txttotal.Text);
+            dict.Add("fecha", dtpfecha.Value.Date.ToString("yyyy-MM-dd HH:mm"));
+
+            i3nRiqJson x5 = new i3nRiqJson();
+            string query5 = "select cod_vehiculo from tbt_vehiculo where placa_vehiculo='" + cmb_vehiculo.Text + "'";
+            System.Collections.ArrayList array5 = x5.consultar(query5);
+
+
+
+            foreach (Dictionary<string, string> dic in array5)
+            {
+                stef = (dic["cod_vehiculo"] + "\n");
+
+            }
+            dict.Add("tbt_vehiculo_cod_vehiculo", stef);
+
+
+            string condicion = "idretiro_vehiculo=" + stef3;
+
+            x.actualizar("3", tabla, dict, condicion);
+            txttotal.Text = "";
+            actualizar();
+
+            MessageBox.Show("Datos editados en retiro de vehiculos",
+        "Editar vehiculos",
+        MessageBoxButtons.OK);
+
+            actualizar();
+
+            
 
         }
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
-            string busca = cmb_eliminar.SelectedValue.ToString();
-            dataGridView1.DataSource = db.consulta_DataGridView("select *from retiro_vehiculo where idretiro_vehiculo =" + busca + ";");
+            i3nRiqJson x3 = new i3nRiqJson();
+            string query = "select cod_vehiculo from tbt_vehiculo where placa_vehiculo='" + cmb_eliminar.Text + "'";
+            System.Collections.ArrayList array = x3.consultar(query);
+
+            foreach (Dictionary<string, string> dic in array)
+            {
+                stef2 = (dic["cod_vehiculo"] + "\n");
+                // txtR.AppendText(dic["employee_name"] + "\n");
+                // Console.WriteLine("VIENEN: "+dic["employee_name"]);
+
+            }
+
+
+
+            textBox1.Text = stef2;
+
+            i3nRiqJson x4 = new i3nRiqJson();
+            string query2 = "select idretiro_vehiculo from retiro_vehiculo where tbt_vehiculo_cod_vehiculo='" + textBox1.Text + "'";
+            System.Collections.ArrayList array2 = x4.consultar(query2);
+
+            foreach (Dictionary<string, string> dic in array2)
+            {
+                stef3 = (dic["idretiro_vehiculo"] + "\n");
+
+                // txtR.AppendText(dic["employee_name"] + "\n");
+                // Console.WriteLine("VIENEN: "+dic["employee_name"]);
+
+            }
+
+
+            textBox2.Text = stef3;
+
+
+
+
+
+
+
+            dataGridView1.DataSource = db.consulta_DataGridView("select *from retiro_vehiculo where idretiro_vehiculo =" + stef3 + ";");
         }
     }
 }

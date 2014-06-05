@@ -30,7 +30,6 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
             this.cmb_eliminar = new System.Windows.Forms.ComboBox();
             this.cmb_prov = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,6 +48,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -85,28 +87,19 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.cmb_eliminar);
-            this.panel2.Location = new System.Drawing.Point(457, 11);
+            this.panel2.Location = new System.Drawing.Point(420, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(139, 75);
+            this.panel2.Size = new System.Drawing.Size(191, 100);
             this.panel2.TabIndex = 20;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 16);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 13);
-            this.label4.TabIndex = 18;
-            this.label4.Text = "Seleccion de campo:";
             // 
             // cmb_eliminar
             // 
             this.cmb_eliminar.FormattingEnabled = true;
-            this.cmb_eliminar.Location = new System.Drawing.Point(36, 34);
+            this.cmb_eliminar.Location = new System.Drawing.Point(41, 44);
             this.cmb_eliminar.Name = "cmb_eliminar";
-            this.cmb_eliminar.Size = new System.Drawing.Size(69, 21);
+            this.cmb_eliminar.Size = new System.Drawing.Size(103, 21);
             this.cmb_eliminar.TabIndex = 17;
             // 
             // cmb_prov
@@ -130,6 +123,7 @@
             // 
             this.txttotal.Location = new System.Drawing.Point(92, 41);
             this.txttotal.Name = "txttotal";
+            this.txttotal.ReadOnly = true;
             this.txttotal.Size = new System.Drawing.Size(156, 20);
             this.txttotal.TabIndex = 15;
             // 
@@ -162,6 +156,7 @@
             // 
             this.txtgastos.Location = new System.Drawing.Point(92, 11);
             this.txtgastos.Name = "txtgastos";
+            this.txtgastos.ReadOnly = true;
             this.txtgastos.Size = new System.Drawing.Size(156, 20);
             this.txtgastos.TabIndex = 7;
             // 
@@ -279,11 +274,38 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(534, 53);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 38;
+            this.textBox2.Visible = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(534, 21);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 37;
+            this.textBox1.Visible = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(-3, 18);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(200, 13);
+            this.label6.TabIndex = 39;
+            this.label6.Text = "Seleccione para eliminar, buscar y editar:";
+            // 
             // frm_detalle_man
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(717, 509);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
@@ -333,9 +355,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txttotal;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cmb_eliminar;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label6;
     }
 }

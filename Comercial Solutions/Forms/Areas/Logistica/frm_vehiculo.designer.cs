@@ -48,6 +48,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.cmb_eliminar = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -57,10 +58,10 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -68,13 +69,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 31);
+            this.label1.Location = new System.Drawing.Point(52, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 13);
             this.label1.TabIndex = 0;
@@ -84,7 +84,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 58);
+            this.label2.Location = new System.Drawing.Point(52, 58);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 13);
             this.label2.TabIndex = 1;
@@ -93,7 +93,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 87);
+            this.label3.Location = new System.Drawing.Point(52, 87);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 13);
             this.label3.TabIndex = 2;
@@ -102,7 +102,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(15, 119);
+            this.label4.Location = new System.Drawing.Point(52, 119);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 13);
             this.label4.TabIndex = 3;
@@ -112,7 +112,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(235, 27);
+            this.label5.Location = new System.Drawing.Point(314, 27);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(60, 13);
             this.label5.TabIndex = 4;
@@ -121,7 +121,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(234, 54);
+            this.label6.Location = new System.Drawing.Point(313, 54);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(37, 13);
             this.label6.TabIndex = 5;
@@ -130,7 +130,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(234, 79);
+            this.label7.Location = new System.Drawing.Point(313, 79);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(61, 13);
             this.label7.TabIndex = 6;
@@ -139,7 +139,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(235, 111);
+            this.label8.Location = new System.Drawing.Point(314, 111);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(37, 13);
             this.label8.TabIndex = 7;
@@ -147,58 +147,67 @@
             // 
             // txtmodelo
             // 
-            this.txtmodelo.Location = new System.Drawing.Point(109, 24);
+            this.txtmodelo.Location = new System.Drawing.Point(146, 24);
             this.txtmodelo.Name = "txtmodelo";
+            this.txtmodelo.ReadOnly = true;
             this.txtmodelo.Size = new System.Drawing.Size(100, 20);
             this.txtmodelo.TabIndex = 8;
             this.txtmodelo.TextChanged += new System.EventHandler(this.txtmodelo_TextChanged);
             // 
             // txtcilindros
             // 
-            this.txtcilindros.Location = new System.Drawing.Point(109, 51);
+            this.txtcilindros.Location = new System.Drawing.Point(146, 51);
             this.txtcilindros.Name = "txtcilindros";
+            this.txtcilindros.ReadOnly = true;
             this.txtcilindros.Size = new System.Drawing.Size(100, 20);
             this.txtcilindros.TabIndex = 9;
             // 
             // txtpuertas
             // 
-            this.txtpuertas.Location = new System.Drawing.Point(109, 80);
+            this.txtpuertas.Location = new System.Drawing.Point(146, 80);
             this.txtpuertas.Name = "txtpuertas";
+            this.txtpuertas.ReadOnly = true;
             this.txtpuertas.Size = new System.Drawing.Size(100, 20);
             this.txtpuertas.TabIndex = 10;
             // 
             // txtchasis
             // 
-            this.txtchasis.Location = new System.Drawing.Point(109, 112);
+            this.txtchasis.Location = new System.Drawing.Point(146, 112);
             this.txtchasis.Name = "txtchasis";
+            this.txtchasis.ReadOnly = true;
             this.txtchasis.Size = new System.Drawing.Size(100, 20);
             this.txtchasis.TabIndex = 11;
             // 
             // txtllantas
             // 
-            this.txtllantas.Location = new System.Drawing.Point(301, 24);
+            this.txtllantas.Location = new System.Drawing.Point(380, 24);
             this.txtllantas.Name = "txtllantas";
+            this.txtllantas.ReadOnly = true;
             this.txtllantas.Size = new System.Drawing.Size(100, 20);
             this.txtllantas.TabIndex = 12;
+            this.txtllantas.TextChanged += new System.EventHandler(this.txtllantas_TextChanged);
             // 
             // txtplaca
             // 
-            this.txtplaca.Location = new System.Drawing.Point(301, 51);
+            this.txtplaca.Location = new System.Drawing.Point(380, 51);
             this.txtplaca.Name = "txtplaca";
+            this.txtplaca.ReadOnly = true;
             this.txtplaca.Size = new System.Drawing.Size(100, 20);
             this.txtplaca.TabIndex = 13;
             // 
             // txtcapacidad
             // 
-            this.txtcapacidad.Location = new System.Drawing.Point(301, 80);
+            this.txtcapacidad.Location = new System.Drawing.Point(380, 80);
             this.txtcapacidad.Name = "txtcapacidad";
+            this.txtcapacidad.ReadOnly = true;
             this.txtcapacidad.Size = new System.Drawing.Size(100, 20);
             this.txtcapacidad.TabIndex = 14;
             // 
             // txtmarca
             // 
-            this.txtmarca.Location = new System.Drawing.Point(301, 112);
+            this.txtmarca.Location = new System.Drawing.Point(380, 112);
             this.txtmarca.Name = "txtmarca";
+            this.txtmarca.ReadOnly = true;
             this.txtmarca.Size = new System.Drawing.Size(100, 20);
             this.txtmarca.TabIndex = 15;
             // 
@@ -254,18 +263,29 @@
             this.panel1.Controls.Add(this.txtcilindros);
             this.panel1.Location = new System.Drawing.Point(37, 139);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(605, 372);
+            this.panel1.Size = new System.Drawing.Size(749, 372);
             this.panel1.TabIndex = 19;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel2.Controls.Add(this.label11);
+            this.panel2.Controls.Add(this.cmb_eliminar);
+            this.panel2.Location = new System.Drawing.Point(590, 18);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(139, 74);
+            this.panel2.TabIndex = 21;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(13, 13);
+            this.label11.Location = new System.Drawing.Point(14, 13);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(107, 13);
+            this.label11.Size = new System.Drawing.Size(106, 13);
             this.label11.TabIndex = 20;
-            this.label11.Text = "Seleccion de campo:";
+            this.label11.Text = "Seleccione vehiculo:";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // cmb_eliminar
             // 
@@ -288,7 +308,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(560, 180);
+            this.dataGridView1.Size = new System.Drawing.Size(679, 180);
             this.dataGridView1.TabIndex = 17;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -356,21 +376,11 @@
             this.pictureBox8.TabStop = false;
             this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.cmb_eliminar);
-            this.panel2.Location = new System.Drawing.Point(454, 18);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(139, 74);
-            this.panel2.TabIndex = 21;
-            // 
             // frm_vehiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(704, 523);
+            this.ClientSize = new System.Drawing.Size(856, 523);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox5);
@@ -389,6 +399,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -396,8 +408,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
