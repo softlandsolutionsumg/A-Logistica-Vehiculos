@@ -34,6 +34,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.cmb_eliminar = new System.Windows.Forms.ComboBox();
             this.cmb_vehiculo = new System.Windows.Forms.ComboBox();
             this.dtpfecha = new System.Windows.Forms.DateTimePicker();
@@ -48,7 +49,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
@@ -125,6 +125,15 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(202, 92);
             this.panel2.TabIndex = 19;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(2, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(200, 13);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "Seleccione para eliminar, buscar y editar:";
             // 
             // cmb_eliminar
             // 
@@ -264,15 +273,6 @@
             this.pictureBox1.TabIndex = 32;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(2, 9);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(200, 13);
-            this.label4.TabIndex = 20;
-            this.label4.Text = "Seleccione para eliminar, buscar y editar:";
             // 
             // frm_mantenimiento
             // 

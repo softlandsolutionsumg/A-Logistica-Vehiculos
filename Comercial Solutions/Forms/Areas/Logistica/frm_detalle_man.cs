@@ -40,13 +40,11 @@ namespace Comercial_Solutions.Forms.Areas.Logistica
 
         public void actualizar()
         {
-
-
+      
 
             i3nRiqJson x = new i3nRiqJson();
-            //string query = "select gastos, total from tbt_detalle_mantenimiento";
-            //dataGridView1.DataSource = ((x.consulta_DataGridView(query)));
-
+          //  string query = "SELECT  tbt_detalle_mantenimiento.gastos as Gastos, tbt_detalle_mantenimiento.total as Total, tbt_vehiculo. placa_vehiculo as Vehiculo, tbm_acpro.nombre_proveedor as Proveedor from   tbt_detalle_mantenimiento.idtbm_proveedor = tbm_acpro.idtbm_proveedor, tbt_detalle_mantenimiento.idtbt_mantenimiento_vehiculo = tbt_mantenimiento_vehiculo.idtbt_mantenimiento_vehiculo ";
+           // dataGridView1.DataSource = ((x.consulta_DataGridView(query)));
 
             dataGridView1.DataSource = db.consulta_DataGridView("SELECT * FROM tbt_detalle_mantenimiento");
             dataGridView1.Columns[1].HeaderText = "Gastos";
@@ -55,6 +53,10 @@ namespace Comercial_Solutions.Forms.Areas.Logistica
             dataGridView1.Columns[4].HeaderText = "Proveedor";
             this.dataGridView1.Columns[0].Visible = false;
 
+           
+            
+            
+            
             i3nRiqJson x2 = new i3nRiqJson();
 
             string query2 = "select cod_vehiculo, placa_vehiculo from tbt_vehiculo";
@@ -106,14 +108,29 @@ namespace Comercial_Solutions.Forms.Areas.Logistica
 
 
 
+                i3nRiqJson x1 = new i3nRiqJson();
+                string query1 = "select cod_vehiculo, placa_vehiculo from tbt_vehiculo where placa_vehiculo='" + cmb_man.Text + "'";
+                System.Collections.ArrayList array1 = x1.consultar(query1);
+                foreach (Dictionary<string, string> dic in array1)
+                {
+                    stef = (dic["cod_vehiculo"] + "\n");
 
+                }
 
-
+                textBox1.Text = stef;
 
                 i3nRiqJson x4 = new i3nRiqJson();
-                string query4 = "select idtbt_mantenimiento_vehiculo from tbt_mantenimiento_vehiculo where idtbt_mantenimiento_vehiculo='" + cmb_man.Text + "'";
-                System.Collections.ArrayList array = x4.consultar(query4);
+                string query4 = "select idtbt_mantenimiento_vehiculo from tbt_mantenimiento_vehiculo where cod_vehiculo='" + textBox1.Text + "'";
+                System.Collections.ArrayList array3 = x4.consultar(query4);
+                foreach (Dictionary<string, string> dic in array3)
+                {
+                    stef2 = (dic["idtbt_mantenimiento_vehiculo"] + "\n");
 
+                }
+
+
+ 
+                dict.Add("idtbt_mantenimiento_vehiculo", stef2);
 
                 i3nRiqJson x5 = new i3nRiqJson();
                 string query5 = "select idtbm_proveedor from tbm_acpro where nombre_proveedor='" + cmb_prov.Text + "'";
@@ -122,34 +139,29 @@ namespace Comercial_Solutions.Forms.Areas.Logistica
 
 
 
-                foreach (Dictionary<string, string> dic in array)
-                {
-                    stef = (dic["idtbt_mantenimiento_vehiculo"] + "\n");
-
-                }
-
                 foreach (Dictionary<string, string> dic in array2)
                 {
-                    stef2 = (dic["idtbm_proveedor"] + "\n");
+                    stef3 = (dic["idtbm_proveedor"] + "\n");
 
                 }
-                dict.Add("idtbt_mantenimiento_vehiculo", stef);
-                dict.Add("idtbm_proveedor", stef2);
+                
+                dict.Add("idtbm_proveedor", stef3);
 
 
                 i3nRiqJson x = new i3nRiqJson();
                 x.insertar("1", tabla, dict);
                 MessageBox.Show("Datos ingresados en detalle mantenimiento  " + i3nRiqJson.RespuestaConexion.ToString());
 
-             
+
+
                 i3nRiqJson x2 = new i3nRiqJson();
 
-                string query2 = "select cod_vehiculo, placa_vehiculo from tbt_vehiculo";
+            string query2 = "select cod_vehiculo, placa_vehiculo from tbt_vehiculo";
 
 
-                cmb_eliminar.DataSource = ((x2.consulta_DataGridView(query2)));
-                cmb_eliminar.ValueMember = "cod_vehiculo";
-                cmb_eliminar.DisplayMember = "placa_vehiculo";
+            cmb_eliminar.DataSource = ((x2.consulta_DataGridView(query2)));
+            cmb_eliminar.ValueMember = "cod_vehiculo";
+            cmb_eliminar.DisplayMember = "placa_vehiculo";
 
                 actualizar();
               /*  i3nRiqJson x2 = new i3nRiqJson();
@@ -175,13 +187,17 @@ namespace Comercial_Solutions.Forms.Areas.Logistica
 
 
 
+
             i3nRiqJson x2 = new i3nRiqJson();
+
             string query2 = "select cod_vehiculo, placa_vehiculo from tbt_vehiculo";
 
 
             cmb_eliminar.DataSource = ((x2.consulta_DataGridView(query2)));
             cmb_eliminar.ValueMember = "cod_vehiculo";
             cmb_eliminar.DisplayMember = "placa_vehiculo";
+
+           
 
         }
         

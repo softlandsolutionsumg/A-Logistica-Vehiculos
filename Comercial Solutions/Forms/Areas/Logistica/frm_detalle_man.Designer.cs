@@ -30,6 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.cmb_eliminar = new System.Windows.Forms.ComboBox();
             this.cmb_prov = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -50,7 +51,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -93,6 +94,15 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(191, 100);
             this.panel2.TabIndex = 20;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(-3, 18);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(200, 13);
+            this.label6.TabIndex = 39;
+            this.label6.Text = "Seleccione para eliminar, buscar y editar:";
             // 
             // cmb_eliminar
             // 
@@ -290,20 +300,19 @@
             this.textBox1.TabIndex = 37;
             this.textBox1.Visible = false;
             // 
-            // label6
+            // textBox3
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(-3, 18);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(200, 13);
-            this.label6.TabIndex = 39;
-            this.label6.Text = "Seleccione para eliminar, buscar y editar:";
+            this.textBox3.Location = new System.Drawing.Point(534, 79);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 42;
             // 
             // frm_detalle_man
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(717, 509);
+            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pictureBox7);
@@ -361,5 +370,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }
